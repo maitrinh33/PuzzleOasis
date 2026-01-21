@@ -17,8 +17,6 @@ export default class State {
   }
 
   #save(state) {
-    if (Debug.enabled) return
-
     this.#saveLocal(state)
     return this.#saveRemote(state)
   }
@@ -92,4 +90,4 @@ export default class State {
     return getDoc(doc(this.db, 'states', Auth.instance.user.uid)).then(res => res.data())
   }
 }
-    ``
+``
